@@ -10,6 +10,8 @@ const GlobalStyle = createGlobalStyle`
 
   html {
     font-size: 16px;
+    display:flex;
+    justify-content:center;
   }
 
   ol,

@@ -4,11 +4,7 @@ import Image from 'next/image';
 import styled from 'styled-components';
 
 const Home: NextPage = () => {
-  return <Test>adf</Test>;
+  return <>adf</>;
 };
-
-const Test = styled.div`
-  color: red;
-`;
 
 export default Home;

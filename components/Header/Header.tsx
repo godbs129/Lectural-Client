@@ -24,9 +24,7 @@ const Header = (): JSX.Element => {
   }, [code]);
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      setToken(Token().getToken('accessToken') as string);
-    }
+    setToken(Token().getToken('accessToken') as string);
   }, []);
 
   useEffect(() => {

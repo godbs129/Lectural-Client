@@ -1,10 +1,8 @@
 import type { NextPage } from 'next';
-import Head from 'next/head';
-import Image from 'next/image';
-import styled from 'styled-components';
+import Main from '../components/Main/Main';
 
 const Home: NextPage = () => {
-  return <>adf</>;
+  return <Main />;
 };
 
 export default Home;

@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@splidejs/react-splide": "^0.7.5",
+    "@splidejs/splide": "^4.0.1",
     "@types/styled-components": "^5.1.24",
     "axios": "^0.27.2",
     "babel-plugin-styled-components": "^2.0.7",

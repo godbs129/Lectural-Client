@@ -32,7 +32,7 @@ const Notice = (): JSX.Element => {
           >
             {notices.map((notice) => {
               return (
-                <SplideSlide style={{ lineHeight: '42px' }}>
+                <SplideSlide key={notice} style={{ lineHeight: '42px' }}>
                   {notice}
                 </SplideSlide>
               );

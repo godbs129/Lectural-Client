@@ -1,3 +1,4 @@
+import Header from '../Header/Header';
 import Notice from '../Notice/Notice';
 import Today from '../Today/Today';
 import * as S from './MainPage.style';
@@ -5,6 +6,7 @@ import * as S from './MainPage.style';
 const MainPage = (): JSX.Element => {
   return (
     <>
+      <Header />
       <Notice />
       <S.MainWrap>
         <Today />

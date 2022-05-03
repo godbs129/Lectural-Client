@@ -2,16 +2,10 @@ import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
 
 const GlobalStyle = createGlobalStyle`
-	${reset}
 
-  *, *::before, *::after {
-    box-sizing: border-box;
-  }
 
   html {
     font-size: 16px;
-    display:flex;
-    justify-content:center;
   }
 
   ol,
@@ -35,6 +29,11 @@ const GlobalStyle = createGlobalStyle`
 
 	body {
     background-color: #ffffff;
+    height: 100vh;
+  }
+
+  #__next {
+    height: 100%;
   }
 `;
 

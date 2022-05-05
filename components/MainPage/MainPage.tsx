@@ -1,3 +1,4 @@
+import Modal from '../Common/Modal/Modal';
 import Header from '../Header/Header';
 import Notice from '../Notice/Notice';
 import Today from '../Today/Today';
@@ -6,6 +7,9 @@ import * as S from './MainPage.style';
 const MainPage = (): JSX.Element => {
   return (
     <>
+      <Modal width="512px" height="398px">
+        asdf
+      </Modal>
       <Header />
       <Notice />
       <S.MainWrap>

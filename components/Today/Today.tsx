@@ -1,7 +1,10 @@
 import dayjs from 'dayjs';
+import { useSetRecoilState } from 'recoil';
+import { isLectureModalOpen, lectureModalData } from '../../store/lectureStore';
+import { LectureData } from '../../types/Lecture';
 import * as S from './Today.style';
 
-const data = [
+const data: LectureData[] = [
   {
     idx: 1,
     title:
@@ -19,7 +22,7 @@ const data = [
       uniqueId: '3p290u5t0392hgnawlg',
       name: '손민재',
       accessLevel: 1,
-      proifleImage:
+      profileImage:
         'http://dodam.b1nd.com/api/image/jpg/DW_IMG_84926080205.jpg',
     },
     place: {
@@ -42,7 +45,7 @@ const data = [
       uniqueId: '3p290u5t0392hgnawlg',
       name: '손민재',
       accessLevel: 1,
-      proifleImage:
+      profileImage:
         'http://dodam.b1nd.com/api/image/jpg/DW_IMG_84926080205.jpg',
     },
     place: {
@@ -65,7 +68,7 @@ const data = [
       uniqueId: '3p290u5t0392hgnawlg',
       name: '손민재',
       accessLevel: 1,
-      proifleImage:
+      profileImage:
         'http://dodam.b1nd.com/api/image/jpg/DW_IMG_84926080205.jpg',
     },
     place: {
@@ -88,7 +91,7 @@ const data = [
       uniqueId: '3p290u5t0392hgnawlg',
       name: '손민재',
       accessLevel: 1,
-      proifleImage:
+      profileImage:
         'http://dodam.b1nd.com/api/image/jpg/DW_IMG_84926080205.jpg',
     },
     place: {
@@ -99,6 +102,9 @@ const data = [
 ];
 
 const Today = (): JSX.Element => {
+  const setModalOpen = useSetRecoilState(isLectureModalOpen);
+  const setLecture = useSetRecoilState(lectureModalData);
+
   return (
     <>
       <S.Today>
@@ -106,7 +112,13 @@ const Today = (): JSX.Element => {
         <S.TodayWrap>
           {data.map((lecture) => {
             return (
-              <S.TodayCard key={lecture.idx}>
+              <S.TodayCard
+                onClick={() => {
+                  setModalOpen(true);
+                  setLecture(lecture);
+                }}
+                key={lecture.idx}
+              >
                 <S.TodayCardImage src={lecture.picture} />
                 <S.TodayCardInfo>
                   <S.TodayCardTitle>{lecture.title}</S.TodayCardTitle>

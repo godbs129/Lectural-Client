@@ -1,15 +1,27 @@
+import { useRecoilState, useRecoilValue } from 'recoil';
+import { isLectureModalOpen, lectureModalData } from '../../store/lectureStore';
+import { LectureData } from '../../types/Lecture';
 import Modal from '../Common/Modal/Modal';
 import Header from '../Header/Header';
 import Notice from '../Notice/Notice';
 import Today from '../Today/Today';
 import * as S from './MainPage.style';
 
+const LectureModal = (lecture: LectureData) => {
+  return (
+    <Modal width="894px" height="722px">
+      {lecture.title}
+    </Modal>
+  );
+};
+
 const MainPage = (): JSX.Element => {
+  const [isLectureOpen, setIsLectureOpen] = useRecoilState(isLectureModalOpen);
+  const lecture = useRecoilValue(lectureModalData);
+
   return (
     <>
-      <Modal width="512px" height="398px">
-        asdf
-      </Modal>
+      {isLectureOpen && LectureModal(lecture)}
       <Header />
       <Notice />
       <S.MainWrap>

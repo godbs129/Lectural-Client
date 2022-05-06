@@ -1,18 +1,21 @@
-export const Token = () => {
-  const getToken = (key: string): string | undefined => {
+class Token {
+  constructor() {}
+
+  public getToken(key: string): string {
     let token;
+
     if (typeof window !== 'undefined') {
-      token = localStorage.getItem(key) as string;
+      token = localStorage.getItem(key);
     }
 
-    return token;
-  };
+    return token as string;
+  }
 
-  const saveToken = (key: string, value: string): void => {
+  public saveToken(key: string, value: string): void {
     if (typeof window !== 'undefined') {
       localStorage.setItem(key, value);
     }
-  };
+  }
+}
 
-  return { getToken, saveToken };
-};
+export default new Token() as Token;

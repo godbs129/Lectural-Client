@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import useQueryParam from '../../lib/useQueryParam';
 import { useRecoilState } from 'recoil';
 import { tokenAtom, userAtom } from '../../store/userStore';
-import { Token } from '../../lib/token';
+import Token from '../../lib/token';
 
 const Header = (): JSX.Element => {
   const [token, setToken] = useRecoilState(tokenAtom);
@@ -25,7 +25,7 @@ const Header = (): JSX.Element => {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      setToken(Token().getToken('accessToken') as string);
+      setToken(Token.getToken('accessToken') as string);
     }
   }, []);
 

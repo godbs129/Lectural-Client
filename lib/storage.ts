@@ -3,7 +3,6 @@ class Storage {
     let value: string | null = null;
 
     if (typeof window !== 'undefined') {
-      console.log(2222, localStorage.getItem(key) as string);
       value = localStorage.getItem(key);
     }
 

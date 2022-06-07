@@ -39,7 +39,6 @@ export const useLogin = () => {
   };
 
   const getUserInfo = async () => {
-    // const { data } = await customAxios.get('/auth/user');
     const { data } = await axios.get(
       `${process.env.NEXT_PUBLIC_ENDPOINT}/auth/user`,
       {

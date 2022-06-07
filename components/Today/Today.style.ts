@@ -33,8 +33,8 @@ export const TodayCardImage = styled.div<{ src: string }>`
   border-radius: 20px 20px 0 0;
   background-image: ${(props) => `url(${props.src})`};
   background-repeat: no-repeat;
-  background-position: top;
-  background-size: contain;
+  background-position: center;
+  background-size: cover;
 `;
 
 export const TodayCardInfo = styled.div`
@@ -57,7 +57,7 @@ export const TodayCardTitle = styled.div`
 export const TodayCardContent = styled.div`
   font-size: 14px;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   line-height: 20px;
   overflow: hidden;

@@ -1,8 +1,9 @@
 import axios from 'axios';
 import { useRouter } from 'next/router';
 import { useRecoilState } from 'recoil';
+import { AccessToken } from '../../constants/token';
 import customAxios from '../../lib/axios';
-import { Token } from '../../lib/token';
+import Token from '../../lib/token';
 import { tokenAtom, userAtom } from '../../store/userStore';
 
 export const useLogin = () => {
@@ -30,28 +31,37 @@ export const useLogin = () => {
     setToken(data.data.accessToken);
 
     navigate.push('/');
-    getUserInfo();
   };
 
   const saveTokens = (accessToken: string, refreshToken: string) => {
-    Token().saveToken('accessToken', accessToken);
-    Token().saveToken('refreshToken', refreshToken);
+    Token.saveToken('accessToken', accessToken);
+    Token.saveToken('refreshToken', refreshToken);
   };
 
   const getUserInfo = async () => {
-    if (typeof window !== 'undefined') {
-      const { data } = await axios.get('http://3.34.52.6:8080/auth/user', {
+    const { data } = await axios.get(
+      `${process.env.NEXT_PUBLIC_ENDPOINT}/auth/user`,
+      {
         headers: {
-          authorization: localStorage.getItem('accessToken') as string,
+          authorization: Token.getToken(AccessToken),
         },
-      });
-      setUser(data);
-    }
+      }
+    );
+    setUser(data);
+  };
+
+  const tokenRefresh = async (refreshToken: string) => {
+    const { data } = await customAxios.post('/token/refresh', {
+      refreshToken: refreshToken,
+    });
+
+    console.log(data);
   };
 
   return {
     gotoDauthLogin,
     login,
     getUserInfo,
+    tokenRefresh,
   };
 };

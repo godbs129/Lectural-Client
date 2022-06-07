@@ -10,17 +10,18 @@ const data: LectureData[] = [
     title:
       '손민재가 알려주는 신중빈 침대 강탈하는법 궁금하시죠? 저도 궁금해요~',
     content:
-      '3학년 짬빠 처먹을 만큼 처먹은 손민재가 알려주는 친구 침대 뺐는 법법법법법법법법법법법법법법법법법법법법법법법법법법법법법법법법법법법법법법법법법법법법법법법법법법',
+      '3학년 짬빠 찰만큼 찬 손민재가 알려주는 친구 침대 뺐는 법 궁금하시죠? 저도 궁금해서 강의하기로 했어요~ 궁금하시면 신청하고 목요일 1시까지 시청각실로 오세요.',
     material: '중빈 침대',
     startDate: new Date(),
     endDate: new Date(),
     createdAt: new Date(),
     uniqueId: '3p290u5t0392hgnawlg',
+    tags: ['급식', '대소고', '저녁'],
     picture:
-      'https://file.mk.co.kr/meet/neds/2022/02/image_readtop_2022_159363_16452216614947404.jpg',
+      'http://img.etoday.co.kr/pto_db/2021/10/700/20211027111516_1679805_1200_748.jpg',
     user: {
-      uniqueId: '3p290u5t0392hgnawlg',
-      name: '손민재',
+      uniqueId: '866534f5-16b9-48df-91cf-7bdb06e35d53',
+      name: '전해윤',
       accessLevel: 1,
       profileImage:
         'http://dodam.b1nd.com/api/image/jpg/DW_IMG_84926080205.jpg',
@@ -33,12 +34,12 @@ const data: LectureData[] = [
   {
     idx: 2,
     title: '손민재가 알려주는 신중빈 침대 강탈하는법',
-    content:
-      '3학년 짬빠 처먹을 만큼 처먹은 손민재가 알려주는 친구 침대 뺐는 법',
+    content: '3학년 짬빠 찰만큼 찬 손민재가 알려주는 친구 침대 뺐는 법',
     material: '중빈 침대',
     startDate: new Date(),
     endDate: new Date(),
     createdAt: new Date(),
+    tags: ['급식', '대소고', '저녁'],
     uniqueId: '3p290u5t0392hgnawlg',
     picture: 'http://dodam.b1nd.com/api/image/png/DW_IMG_5452932532.png',
     user: {
@@ -56,9 +57,9 @@ const data: LectureData[] = [
   {
     idx: 3,
     title: '손민재가 알려주는 신중빈 침대 강탈하는법',
-    content:
-      '3학년 짬빠 처먹을 만큼 처먹은 손민재가 알려주는 친구 침대 뺐는 법',
+    content: '3학년 짬빠 찰만큼 찬 손민재가 알려주는 친구 침대 뺐는 법',
     material: '중빈 침대',
+    tags: ['급식', '대소고', '저녁'],
     startDate: new Date(),
     endDate: new Date(),
     createdAt: new Date(),
@@ -79,11 +80,11 @@ const data: LectureData[] = [
   {
     idx: 4,
     title: '손민재가 알려주는 신중빈 침대 강탈하는법',
-    content:
-      '3학년 짬빠 처먹을 만큼 처먹은 손민재가 알려주는 친구 침대 뺐는 법',
+    content: '3학년 짬빠 찰만큼 찬 손민재가 알려주는 친구 침대 뺐는 법',
     material: '중빈 침대',
     startDate: new Date(),
     endDate: new Date(),
+    tags: ['급식', '대소고', '저녁'],
     createdAt: new Date(),
     uniqueId: '3p290u5t0392hgnawlg',
     picture: 'http://dodam.b1nd.com/api/image/png/DW_IMG_5452932532.png',

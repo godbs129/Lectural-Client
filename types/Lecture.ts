@@ -6,6 +6,7 @@ export interface LectureData {
   title: string;
   content: string;
   material: string;
+  tags: string[];
   startDate: Date;
   endDate: Date;
   createdAt: Date;

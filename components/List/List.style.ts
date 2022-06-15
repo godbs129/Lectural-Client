@@ -19,4 +19,5 @@ export const ListWrap = styled.div`
   &::-webkit-scrollbar {
     display: none;
   }
+  margin-top: 13px;
 `;

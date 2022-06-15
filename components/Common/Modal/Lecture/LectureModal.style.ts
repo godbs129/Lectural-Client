@@ -71,4 +71,5 @@ export const LectureContentWrap = styled.div`
 
 export const LectureContent = styled.div`
   width: 600px;
+  word-break: break-all;
 `;

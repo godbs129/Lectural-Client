@@ -10,7 +10,7 @@ const data: LectureData[] = [
     title:
       '손민재가 알려주는 신중빈 침대 강탈하는법 궁금하시죠? 저도 궁금해요~',
     content:
-      '3학년 짬빠 찰만큼 찬 손민재가 알려주는 친구 침대 뺐는 법 궁금하시죠? 저도 궁금해서 강의하기로 했어요~ 궁금하시면 신청하고 목요일 1시까지 시청각실로 오세요.',
+      '3학년 짬빠 찰만큼 찬 손민재가 알려주는 친구 침대 뺐는 법 궁금하시죠? 저도 궁금해서 강의하기로 했어요~ 궁금하시면 신청하고 목요일 1시까지 시청각실로 오세요.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
     material: '중빈 침대',
     startDate: new Date(),
     endDate: new Date(),

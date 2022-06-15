@@ -5,6 +5,7 @@ import { LectureData } from '../../types/Lecture';
 import LectureModal from '../Common/Modal/Lecture/LectureModal';
 import Modal from '../Common/Modal/Modal';
 import Header from '../Header/Header';
+import List from '../List/List';
 import Notice from '../Notice/Notice';
 import Today from '../Today/Today';
 import * as S from './MainPage.style';
@@ -21,16 +22,7 @@ const MainPage = (): JSX.Element => {
       <Notice />
       <S.MainWrap>
         <Today />
-        <div
-          style={{
-            width: '23%',
-            marginLeft: '58px',
-            marginRight: '58px',
-            background: 'blue',
-          }}
-        >
-          전체 학생 전문가 특강
-        </div>
+        <List />
         <div style={{ width: '15%', background: 'blue' }}>
           유저들이 원하는 주제
         </div>

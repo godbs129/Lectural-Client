@@ -23,7 +23,7 @@ const List = (): JSX.Element => {
         <S.ListTitle>전체 학생 전문가 특강</S.ListTitle>
         <S.ListWrap>
           {lectures.map((lecture: LectureData) => {
-            return <Item lecture={lecture} />;
+            return <Item key={lecture.idx} lecture={lecture} />;
           })}
         </S.ListWrap>
       </S.List>

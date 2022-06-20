@@ -1,11 +1,25 @@
 import dayjs from 'dayjs';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
+import { useLecture } from '../../../../hooks/Lecture/useLecture';
 import { LectureData } from '../../../../types/Lecture';
 import { User } from '../../../../types/User';
 import Modal from '../Modal';
 import * as S from './LectureModal.style';
 
 const LectureModal = (lecture: LectureData, user: User): JSX.Element => {
+  const { deleteLecture } = useLecture();
+
+  const router = useRouter();
+
+  const onClickDelete = async () => {
+    const response = await deleteLecture(lecture.idx);
+
+    if (response === 200) {
+      router.reload();
+    }
+  };
+
   return (
     <>
       <Modal width="894px" height="722px">
@@ -31,11 +45,22 @@ const LectureModal = (lecture: LectureData, user: User): JSX.Element => {
 
           <S.LectureMaterial>준비물: {lecture.material}</S.LectureMaterial>
 
-          <S.LectureTagWrap>
-            {lecture.tags.map((tag) => {
-              return <S.LectureTag>#{tag.name}</S.LectureTag>;
-            })}
-          </S.LectureTagWrap>
+          <S.LectureBottomWrap>
+            <S.LectureTagWrap>
+              {lecture.tags.map((tag) => {
+                return <S.LectureTag key={tag.idx}>#{tag.name}</S.LectureTag>;
+              })}
+            </S.LectureTagWrap>
+
+            {lecture.user.uniqueId === user.uniqueId && (
+              <S.LectureEditWrap>
+                <S.LectureEditBtn>편집</S.LectureEditBtn>
+                <S.LectureEditBtn onClick={onClickDelete}>
+                  삭제
+                </S.LectureEditBtn>
+              </S.LectureEditWrap>
+            )}
+          </S.LectureBottomWrap>
 
           <S.LecturePicture>
             <Image

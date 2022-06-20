@@ -14,7 +14,6 @@ const Item = ({ lecture }: { lecture: LectureData }): JSX.Element => {
 
   const onClickLecture = () => {
     setModalOpen(true);
-    console.log(lecture);
     setLecture(lecture);
   };
 

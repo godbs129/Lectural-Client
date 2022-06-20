@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const ItemWrap = styled.div`
   width: 100%;
   border: 0.5px solid #d1d8e5;
-  height: 141px;
+  height: 15%;
   margin-bottom: 10%;
   border-radius: 20px;
   padding: 14px;
@@ -11,9 +11,12 @@ export const ItemWrap = styled.div`
 `;
 
 export const ItemHeader = styled.div`
-  width: 100%;
   display: flex;
   justify-content: flex-end;
+`;
+
+export const ItemHeaderArrow = styled.div`
+  cursor: pointer;
 `;
 
 export const ItemContent = styled.div`
@@ -62,4 +65,11 @@ export const ItemContentBottomTags = styled.div`
   display: flex;
   align-items: center;
   border-radius: 10px;
+`;
+
+export const ItemContentBottomInfo = styled.div``;
+
+export const ItemContentBottomInfoData = styled.div`
+  font-size: 13px;
+  color: #767676;
 `;

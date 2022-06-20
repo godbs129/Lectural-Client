@@ -11,7 +11,14 @@ export const useLecture = () => {
     return lectures.data.data;
   };
 
+  const deleteLecture = async (idx: number) => {
+    const response = await customAxios.delete(`/lecture/${idx}`);
+
+    return response.status;
+  };
+
   return {
     getAllLectures,
+    deleteLecture,
   };
 };

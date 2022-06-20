@@ -7,6 +7,7 @@ import Modal from '../Common/Modal/Modal';
 import Header from '../Header/Header';
 import List from '../List/List';
 import Notice from '../Notice/Notice';
+import Request from '../Request/Request';
 import Today from '../Today/Today';
 import * as S from './MainPage.style';
 
@@ -23,9 +24,7 @@ const MainPage = (): JSX.Element => {
       <S.MainWrap>
         <Today />
         <List />
-        <div style={{ width: '15%', background: 'blue' }}>
-          유저들이 원하는 주제
-        </div>
+        <Request />
       </S.MainWrap>
     </>
   );

@@ -26,6 +26,7 @@ export const lectureModalData = atom<LectureData>({
       uniqueId: '',
     },
     place: {
+      idx: 0,
       name: '',
       type: 0,
     },

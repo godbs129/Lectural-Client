@@ -27,7 +27,7 @@ const LectureModal = (lecture: LectureData, user: User): JSX.Element => {
 
           <S.LectureTagWrap>
             {lecture.tags.map((tag) => {
-              return <S.LectureTag>#{tag}</S.LectureTag>;
+              return <S.LectureTag>#{tag.name}</S.LectureTag>;
             })}
           </S.LectureTagWrap>
 

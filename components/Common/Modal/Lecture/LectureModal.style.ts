@@ -29,6 +29,10 @@ export const LectureModalPlace = styled.div`
   margin-right: 8px;
 `;
 
+export const LecutrePlaceText = styled.div`
+  color: red;
+`;
+
 export const LectureModalTime = styled.div`
   color: #767676;
 `;
@@ -71,4 +75,5 @@ export const LectureContentWrap = styled.div`
 
 export const LectureContent = styled.div`
   width: 600px;
+  word-break: break-all;
 `;

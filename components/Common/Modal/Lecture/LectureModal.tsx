@@ -16,7 +16,13 @@ const LectureModal = (lecture: LectureData, user: User): JSX.Element => {
           </S.LectureModalHeaderTitleWrap>
 
           <S.LectureModalMiddleWrap>
-            <S.LectureModalPlace>{lecture.place.name}</S.LectureModalPlace>
+            <S.LectureModalPlace>
+              {lecture.place !== null ? (
+                <>{lecture.place.name}</>
+              ) : (
+                <S.LecutrePlaceText>장소 선택 전</S.LecutrePlaceText>
+              )}
+            </S.LectureModalPlace>
             <S.LectureModalTime>
               {dayjs(lecture.startDate).format('MM월 DD일 HH:mm')} ~{' '}
               {dayjs(lecture.endDate).format('MM월 DD일 HH:mm')}
@@ -27,7 +33,7 @@ const LectureModal = (lecture: LectureData, user: User): JSX.Element => {
 
           <S.LectureTagWrap>
             {lecture.tags.map((tag) => {
-              return <S.LectureTag>#{tag}</S.LectureTag>;
+              return <S.LectureTag>#{tag.name}</S.LectureTag>;
             })}
           </S.LectureTagWrap>
 

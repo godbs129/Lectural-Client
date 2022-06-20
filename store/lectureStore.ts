@@ -16,6 +16,7 @@ export const lectureModalData = atom<LectureData>({
     startDate: new Date(),
     endDate: new Date(),
     createdAt: new Date(),
+    tags: [],
     uniqueId: '',
     picture: '',
     user: {
@@ -25,6 +26,7 @@ export const lectureModalData = atom<LectureData>({
       uniqueId: '',
     },
     place: {
+      idx: 0,
       name: '',
       type: 0,
     },

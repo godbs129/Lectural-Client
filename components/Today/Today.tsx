@@ -10,13 +10,16 @@ const data: LectureData[] = [
     title:
       '손민재가 알려주는 신중빈 침대 강탈하는법 궁금하시죠? 저도 궁금해요~',
     content:
-      '3학년 짬빠 찰만큼 찬 손민재가 알려주는 친구 침대 뺐는 법 궁금하시죠? 저도 궁금해서 강의하기로 했어요~ 궁금하시면 신청하고 목요일 1시까지 시청각실로 오세요.',
+      '3학년 짬빠 찰만큼 찬 손민재가 알려주는 친구 침대 뺐는 법 궁금하시죠? 저도 궁금해서 강의하기로 했어요~ 궁금하시면 신청하고 목요일 1시까지 시청각실로 오세요.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
     material: '중빈 침대',
     startDate: new Date(),
     endDate: new Date(),
     createdAt: new Date(),
     uniqueId: '3p290u5t0392hgnawlg',
-    tags: ['급식', '대소고', '저녁'],
+    tags: [
+      { idx: 1, name: 'ㅋㅋ', lectureIdx: 1 },
+      { idx: 1, name: 'ㅋㅋ', lectureIdx: 1 },
+    ],
     picture:
       'http://img.etoday.co.kr/pto_db/2021/10/700/20211027111516_1679805_1200_748.jpg',
     user: {
@@ -27,6 +30,7 @@ const data: LectureData[] = [
         'http://dodam.b1nd.com/api/image/jpg/DW_IMG_84926080205.jpg',
     },
     place: {
+      idx: 1,
       name: '기숙사 507호',
       type: 1,
     },
@@ -39,7 +43,10 @@ const data: LectureData[] = [
     startDate: new Date(),
     endDate: new Date(),
     createdAt: new Date(),
-    tags: ['급식', '대소고', '저녁'],
+    tags: [
+      { idx: 1, name: 'ㅋㅋ', lectureIdx: 1 },
+      { idx: 1, name: 'ㅋㅋ', lectureIdx: 1 },
+    ],
     uniqueId: '3p290u5t0392hgnawlg',
     picture: 'http://dodam.b1nd.com/api/image/png/DW_IMG_5452932532.png',
     user: {
@@ -50,6 +57,7 @@ const data: LectureData[] = [
         'http://dodam.b1nd.com/api/image/jpg/DW_IMG_84926080205.jpg',
     },
     place: {
+      idx: 0,
       name: '기숙사 507호',
       type: 1,
     },
@@ -59,7 +67,10 @@ const data: LectureData[] = [
     title: '손민재가 알려주는 신중빈 침대 강탈하는법',
     content: '3학년 짬빠 찰만큼 찬 손민재가 알려주는 친구 침대 뺐는 법',
     material: '중빈 침대',
-    tags: ['급식', '대소고', '저녁'],
+    tags: [
+      { idx: 1, name: 'ㅋㅋ', lectureIdx: 1 },
+      { idx: 1, name: 'ㅋㅋ', lectureIdx: 1 },
+    ],
     startDate: new Date(),
     endDate: new Date(),
     createdAt: new Date(),
@@ -73,6 +84,7 @@ const data: LectureData[] = [
         'http://dodam.b1nd.com/api/image/jpg/DW_IMG_84926080205.jpg',
     },
     place: {
+      idx: 0,
       name: '기숙사 507호',
       type: 1,
     },
@@ -84,7 +96,10 @@ const data: LectureData[] = [
     material: '중빈 침대',
     startDate: new Date(),
     endDate: new Date(),
-    tags: ['급식', '대소고', '저녁'],
+    tags: [
+      { idx: 1, name: 'ㅋㅋ', lectureIdx: 1 },
+      { idx: 1, name: 'ㅋㅋ', lectureIdx: 1 },
+    ],
     createdAt: new Date(),
     uniqueId: '3p290u5t0392hgnawlg',
     picture: 'http://dodam.b1nd.com/api/image/png/DW_IMG_5452932532.png',
@@ -96,6 +111,7 @@ const data: LectureData[] = [
         'http://dodam.b1nd.com/api/image/jpg/DW_IMG_84926080205.jpg',
     },
     place: {
+      idx: 0,
       name: '기숙사 507호',
       type: 1,
     },

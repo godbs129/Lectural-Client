@@ -7,4 +7,5 @@ export const MainWrap = styled.div`
   height: 80%;
   justify-content: center;
   align-items: flex-start;
+  overflow: hidden;
 `;

@@ -5,5 +5,13 @@ export const useLecture = () => {
     await customAxios.get(`/lecture/today`);
   };
 
-  return {};
+  const getAllLectures = async () => {
+    const lectures = await customAxios.get(`/lecture/`);
+
+    return lectures.data.data;
+  };
+
+  return {
+    getAllLectures,
+  };
 };

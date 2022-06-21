@@ -6,6 +6,7 @@ import {
   isLectureModalOpen,
   lectureModalData,
 } from '../../../store/lectureStore';
+import { isRequestModalOpen } from '../../../store/requestStore';
 
 interface ModalProps {
   width: string;
@@ -15,10 +16,12 @@ interface ModalProps {
 
 const Modal = ({ width, height, children }: ModalProps): JSX.Element => {
   const setIsModal = useSetRecoilState(isLectureModalOpen);
+  const setIsRequestModal = useSetRecoilState(isRequestModalOpen);
   const resetLectureData = useResetRecoilState(lectureModalData);
 
   const closeModal = () => {
     setIsModal(false);
+    setIsRequestModal(false);
     resetLectureData();
   };
 

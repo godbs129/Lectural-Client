@@ -23,5 +23,8 @@ export const CloseBtn = styled.div`
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  cursor: pointer;
+
+  & > svg {
+    cursor: pointer;
+  }
 `;

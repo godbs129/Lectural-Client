@@ -9,6 +9,7 @@ export const Modal = styled.div`
   justify-content: center;
   align-items: center;
   z-index: 123;
+  top: 0;
 `;
 
 export const ModalWrapper = styled.div<{ width: string; height: string }>`

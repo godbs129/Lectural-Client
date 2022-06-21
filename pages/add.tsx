@@ -1,7 +1,8 @@
 import type { NextPage } from 'next';
+import AddPage from '../components/AddPage/AddPage';
 
 const Add: NextPage = () => {
-  return <div>asdf</div>;
+  return <AddPage />;
 };
 
 export default Add;

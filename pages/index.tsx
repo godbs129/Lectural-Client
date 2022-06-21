@@ -5,7 +5,6 @@ import { Toaster } from 'react-hot-toast';
 const Home: NextPage = () => {
   return (
     <>
-      <Toaster />
       <MainPage />
     </>
   );

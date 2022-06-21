@@ -42,6 +42,21 @@ export const LectureMaterial = styled.div`
   margin-top: 7px;
 `;
 
+export const LectureBottomWrap = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
+export const LectureEditWrap = styled.div`
+  display: flex;
+`;
+
+export const LectureEditBtn = styled.div`
+  color: #767676;
+  margin-left: 5px;
+  cursor: pointer;
+`;
+
 export const LectureTagWrap = styled.div`
   padding: 0 5px 0 5px;
   border: 0.5px solid black;

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { useLecture } from '../../hooks/Lecture/useLecture';
-import { LectureData } from '../../types/Lecture';
+import { useLecture } from '../../../hooks/Lecture/useLecture';
+import { LectureData } from '../../../types/Lecture';
 import Item from './Item/Item';
 import * as S from './List.style';
 
@@ -23,7 +23,7 @@ const List = (): JSX.Element => {
         <S.ListTitle>전체 학생 전문가 특강</S.ListTitle>
         <S.ListWrap>
           {lectures.map((lecture: LectureData) => {
-            return <Item lecture={lecture} />;
+            return <Item key={lecture.idx} lecture={lecture} />;
           })}
         </S.ListWrap>
       </S.List>

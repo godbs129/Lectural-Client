@@ -41,7 +41,9 @@ const Header = (): JSX.Element => {
           <S.LoginBtn onClick={gotoDauthLogin}>로그인</S.LoginBtn>
         ) : (
           <S.UserProfile>
-            <S.UserProfileName>{user.name} 학생</S.UserProfileName>
+            <S.UserProfileName>
+              {user.name} {user.accessLevel === 1 ? '학생' : '선생님'}
+            </S.UserProfileName>
             <S.UserProfileImage url={user.profileImage} />
           </S.UserProfile>
         )}

@@ -1,7 +1,10 @@
 import dayjs from 'dayjs';
 import { useSetRecoilState } from 'recoil';
-import { isLectureModalOpen, lectureModalData } from '../../store/lectureStore';
-import { LectureData } from '../../types/Lecture';
+import {
+  isLectureModalOpen,
+  lectureModalData,
+} from '../../../store/lectureStore';
+import { LectureData } from '../../../types/Lecture';
 import * as S from './Today.style';
 
 const data: LectureData[] = [

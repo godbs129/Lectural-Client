@@ -1,12 +1,12 @@
-import { LectureData, Tag } from '../../../types/Lecture';
+import { LectureData, Tag } from '../../../../types/Lecture';
 import * as S from './Item.style';
-import Arrow from '../../../public/assets/Arrow.svg';
+import Arrow from '../../../../public/assets/Arrow.svg';
 import dayjs from 'dayjs';
 import { useSetRecoilState } from 'recoil';
 import {
   isLectureModalOpen,
   lectureModalData,
-} from '../../../store/lectureStore';
+} from '../../../../store/lectureStore';
 
 const Item = ({ lecture }: { lecture: LectureData }): JSX.Element => {
   const setModalOpen = useSetRecoilState(isLectureModalOpen);
@@ -14,7 +14,6 @@ const Item = ({ lecture }: { lecture: LectureData }): JSX.Element => {
 
   const onClickLecture = () => {
     setModalOpen(true);
-    console.log(lecture);
     setLecture(lecture);
   };
 
@@ -43,7 +42,7 @@ const Item = ({ lecture }: { lecture: LectureData }): JSX.Element => {
           <S.ItemContentBottom>
             <S.ItemContentBottomTags>
               {lecture.tags.map((tag: Tag) => {
-                return <>#{tag.name} </>;
+                return <div key={tag.idx}>#{tag.name} </div>;
               })}
             </S.ItemContentBottomTags>
 

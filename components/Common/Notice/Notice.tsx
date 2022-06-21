@@ -1,7 +1,7 @@
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 import * as S from './Notice.style';
-import Warning from '../../public/assets/Warning.svg';
+import Warning from '../../../public/assets/Warning.svg';
 
 const notices = [
   `전해윤 학생의1 "급식 맛있게 먹는 법" 강의는 부적절한 주제로

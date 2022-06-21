@@ -2,11 +2,8 @@ import { useRecoilState, useRecoilValue } from 'recoil';
 import { isLectureModalOpen, lectureModalData } from '../../store/lectureStore';
 import { isRequestModalOpen } from '../../store/requestStore';
 import { userAtom } from '../../store/userStore';
-import { LectureData } from '../../types/Lecture';
 import LectureModal from '../Common/Modal/Lecture/LectureModal';
-import Modal from '../Common/Modal/Modal';
 import RequestModal from '../Common/Modal/Request/RequestModal';
-import Header from '../Header/Header';
 import List from '../List/List';
 import Notice from '../Notice/Notice';
 import Request from '../Request/Request';
@@ -23,7 +20,6 @@ const MainPage = (): JSX.Element => {
     <>
       {isLectureOpen && <LectureModal lecture={lecture} user={user} />}
       {isRequestOpen && <RequestModal />}
-      <Header />
       <Notice />
       <S.MainWrap>
         <Today />

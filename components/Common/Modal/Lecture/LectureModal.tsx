@@ -7,7 +7,13 @@ import { User } from '../../../../types/User';
 import Modal from '../Modal';
 import * as S from './LectureModal.style';
 
-const LectureModal = (lecture: LectureData, user: User): JSX.Element => {
+const LectureModal = ({
+  lecture,
+  user,
+}: {
+  lecture: LectureData;
+  user: User;
+}): JSX.Element => {
   const { deleteLecture } = useLecture();
 
   const router = useRouter();

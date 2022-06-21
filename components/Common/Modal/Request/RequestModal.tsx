@@ -1,7 +1,30 @@
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
+import { useSetRecoilState } from 'recoil';
+import { useRequest } from '../../../../hooks/request/useRequest';
+import { isRequestModalOpen } from '../../../../store/requestStore';
 import Modal from '../Modal';
 import * as S from './RequestModal.style';
+import toast from 'react-hot-toast';
 
 const RequestModal = (): JSX.Element => {
+  const [request, setRequest] = useState<string>('');
+  const setIsRequestModal = useSetRecoilState(isRequestModalOpen);
+  const { addRequest } = useRequest();
+
+  const router = useRouter();
+
+  const onClickAdd = async () => {
+    const result = await addRequest(request);
+
+    if (result.status === 201) {
+      setIsRequestModal(false);
+      toast.success('요청이 작성되었어요', {
+        position: 'top-right',
+      });
+    }
+  };
+
   return (
     <Modal width="27%" height="36%">
       <S.RequestModalWrap>
@@ -11,9 +34,13 @@ const RequestModal = (): JSX.Element => {
         </S.RequestModalContent>
 
         <S.RequestModalInputWrap>
-          <S.RequestModalInput />
+          <S.RequestModalInput
+            onChange={(e) => {
+              setRequest(e.target.value);
+            }}
+          />
 
-          <S.RequestModalBtn>작성 완료</S.RequestModalBtn>
+          <S.RequestModalBtn onClick={onClickAdd}>작성 완료</S.RequestModalBtn>
         </S.RequestModalInputWrap>
 
         <S.RequestModalWarning>

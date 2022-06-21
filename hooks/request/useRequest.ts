@@ -7,7 +7,16 @@ export const useRequest = () => {
     return requests;
   };
 
+  const addRequest = async (content: string) => {
+    const response = await customAxios.post('/request', {
+      content: content,
+    });
+
+    return response;
+  };
+
   return {
     getRequests,
+    addRequest,
   };
 };

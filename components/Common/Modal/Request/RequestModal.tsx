@@ -1,5 +1,4 @@
-import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useSetRecoilState } from 'recoil';
 import { useRequest } from '../../../../hooks/request/useRequest';
 import { isRequestModalOpen } from '../../../../store/requestStore';
@@ -11,8 +10,6 @@ const RequestModal = (): JSX.Element => {
   const [request, setRequest] = useState<string>('');
   const setIsRequestModal = useSetRecoilState(isRequestModalOpen);
   const { addRequest } = useRequest();
-
-  const router = useRouter();
 
   const onClickAdd = async () => {
     const result = await addRequest(request);

@@ -44,7 +44,7 @@ const Request = (): JSX.Element => {
           })}
         </S.RequestContentWrap>
 
-        {user.accessLevel === 1 ? (
+        {user !== undefined && user.accessLevel === 1 ? (
           <S.RequestUnderBtn
             onClick={() => {
               router.push('/add');

@@ -4,6 +4,10 @@ export const RequestWrap = styled.div`
   width: 15%;
 `;
 
+export const RequestPlusIcon = styled.div`
+  cursor: pointer;
+`;
+
 export const RequestHeader = styled.div`
   display: flex;
   justify-content: space-between;

@@ -27,3 +27,17 @@ export const Request = styled.div`
   padding: 30px 0 30px 0;
   text-align: center;
 `;
+
+export const RequestUnderBtn = styled.div`
+  width: 100%;
+  height: 48px;
+  background: #0062ff;
+  color: white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  margin-top: 20px;
+  cursor: pointer;
+`;

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { useLecture } from '../../hooks/Lecture/useLecture';
-import { LectureData } from '../../types/Lecture';
+import { useLecture } from '../../../hooks/Lecture/useLecture';
+import { LectureData } from '../../../types/Lecture';
 import Item from './Item/Item';
 import * as S from './List.style';
 

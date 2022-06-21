@@ -4,10 +4,10 @@ import { isRequestModalOpen } from '../../store/requestStore';
 import { userAtom } from '../../store/userStore';
 import LectureModal from '../Common/Modal/Lecture/LectureModal';
 import RequestModal from '../Common/Modal/Request/RequestModal';
-import List from '../List/List';
+import List from './List/List';
 import Notice from '../Notice/Notice';
-import Request from '../Request/Request';
-import Today from '../Today/Today';
+import Request from './Request/Request';
+import Today from './Today/Today';
 import * as S from './MainPage.style';
 
 const MainPage = (): JSX.Element => {

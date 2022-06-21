@@ -1,12 +1,12 @@
-import { LectureData, Tag } from '../../../types/Lecture';
+import { LectureData, Tag } from '../../../../types/Lecture';
 import * as S from './Item.style';
-import Arrow from '../../../public/assets/Arrow.svg';
+import Arrow from '../../../../public/assets/Arrow.svg';
 import dayjs from 'dayjs';
 import { useSetRecoilState } from 'recoil';
 import {
   isLectureModalOpen,
   lectureModalData,
-} from '../../../store/lectureStore';
+} from '../../../../store/lectureStore';
 
 const Item = ({ lecture }: { lecture: LectureData }): JSX.Element => {
   const setModalOpen = useSetRecoilState(isLectureModalOpen);

@@ -1,10 +1,10 @@
 import * as S from './Request.style';
-import Plus from '../../public/assets/Plus.svg';
-import { useRequest } from '../../hooks/request/useRequest';
+import Plus from '../../../public/assets/Plus.svg';
+import { useRequest } from '../../../hooks/request/useRequest';
 import { useEffect, useState } from 'react';
-import { isRequestModalOpen } from '../../store/requestStore';
+import { isRequestModalOpen } from '../../../store/requestStore';
 import { useRecoilState } from 'recoil';
-import { userAtom } from '../../store/userStore';
+import { userAtom } from '../../../store/userStore';
 import { useRouter } from 'next/router';
 
 const Request = (): JSX.Element => {

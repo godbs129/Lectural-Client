@@ -51,8 +51,10 @@ const Item = ({ lecture }: { lecture: LectureData }): JSX.Element => {
                 {lecture.user.name}
               </S.ItemContentBottomInfoData>
               <S.ItemContentBottomInfoData>
-                {dayjs(lecture.startDate).format('YYYY-MM-DD HH:mm')} ~{' '}
-                {dayjs(lecture.endDate).format('HH:mm')}
+                {dayjs(lecture.startDate)
+                  .subtract(9, 'hour')
+                  .format('YYYY-MM-DD HH:mm')}{' '}
+                ~ {dayjs(lecture.endDate).subtract(9, 'hour').format('HH:mm')}
               </S.ItemContentBottomInfoData>
             </S.ItemContentBottomInfo>
           </S.ItemContentBottom>

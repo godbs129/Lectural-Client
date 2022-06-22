@@ -45,11 +45,22 @@ const Today = (): JSX.Element => {
                   <S.TodayCardTitle>{lecture.title}</S.TodayCardTitle>
                   <S.TodayCardContent>{lecture.content}</S.TodayCardContent>
                   <S.TodayCardBottom>
-                    {/* <S.TodayCardPlace>{lecture.place.name}</S.TodayCardPlace> */}
+                    <S.TodayCardPlace>
+                      {lecture.place !== null ? (
+                        <>{lecture.place.name}</>
+                      ) : (
+                        <>아직 장소가 없어요!</>
+                      )}
+                    </S.TodayCardPlace>
                     <S.TodayCardData>
                       <S.TodayCardTime>
-                        {dayjs(lecture.startDate).format('HH:mm')} ~{' '}
-                        {dayjs(lecture.endDate).format('HH:mm')}
+                        {dayjs(lecture.startDate)
+                          .subtract(9, 'hour')
+                          .format('HH:mm')}{' '}
+                        ~{' '}
+                        {dayjs(lecture.endDate)
+                          .subtract(9, 'hour')
+                          .format('HH:mm')}
                       </S.TodayCardTime>
                       <S.TodayCardName>{lecture.user.name}</S.TodayCardName>
                     </S.TodayCardData>

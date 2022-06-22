@@ -35,10 +35,19 @@ export const useLecture = () => {
     return result.data;
   };
 
+  const adminDelete = async (idx: number) => {
+    const response = await customAxios.post(`/lecture/inapposite/${idx}`, {
+      reason: '부적절',
+    });
+
+    return response.status;
+  };
+
   return {
     getAllLectures,
     getTodayLecture,
     deleteLecture,
     addLecture,
+    adminDelete,
   };
 };

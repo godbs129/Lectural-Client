@@ -24,10 +24,6 @@ const Header = (): JSX.Element => {
   }, [code]);
 
   useEffect(() => {
-    setToken(Token.getToken('accessToken') as string);
-  }, []);
-
-  useEffect(() => {
     if (token) {
       getUserInfo();
     }

@@ -20,7 +20,6 @@ const Today = (): JSX.Element => {
     const getLecture = async () => {
       const result = await getTodayLecture();
 
-      console.log(result.data);
       setLectures(result.data);
     };
 
@@ -33,7 +32,6 @@ const Today = (): JSX.Element => {
         <S.TodayTitle>오늘의 특강</S.TodayTitle>
         <S.TodayWrap>
           {lectures.map((lecture) => {
-            console.log(lecture);
             return (
               <S.TodayCard
                 onClick={() => {

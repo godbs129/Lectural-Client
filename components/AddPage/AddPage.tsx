@@ -4,6 +4,7 @@ import imageCompression from 'browser-image-compression';
 import { useUpload } from '../../hooks/upload/useUpload';
 import toast from 'react-hot-toast';
 import { useLecture } from '../../hooks/Lecture/useLecture';
+import { useRouter } from 'next/router';
 
 const places = [
   { idx: 1, name: '1-1' },
@@ -51,6 +52,8 @@ const AddPage = (): JSX.Element => {
 
   const { upload } = useUpload();
   const { addLecture } = useLecture();
+
+  const router = useRouter();
 
   const optimizeImage = useCallback(async (file: File) => {
     try {
@@ -112,7 +115,9 @@ const AddPage = (): JSX.Element => {
 
   const onClickSubmit = async () => {
     const result = await addLecture(lecture, place);
-    console.log(result);
+    if (result.status === 200) {
+      router.push('/');
+    }
   };
 
   return (

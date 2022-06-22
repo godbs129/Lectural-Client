@@ -44,7 +44,7 @@ const Request = (): JSX.Element => {
           })}
         </S.RequestContentWrap>
 
-        {user.accessLevel === 1 ? (
+        {user !== undefined && user.accessLevel === 1 ? (
           <S.RequestUnderBtn
             onClick={() => {
               router.push('/add');
@@ -53,7 +53,13 @@ const Request = (): JSX.Element => {
             특강 등록하기
           </S.RequestUnderBtn>
         ) : (
-          <S.RequestUnderBtn>관리자 페이지로 가기</S.RequestUnderBtn>
+          <S.RequestUnderBtn
+            onClick={() => {
+              router.push('/admin');
+            }}
+          >
+            관리자 페이지로 가기
+          </S.RequestUnderBtn>
         )}
       </S.RequestWrap>
     </>

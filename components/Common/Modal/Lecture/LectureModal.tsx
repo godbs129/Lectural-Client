@@ -14,7 +14,7 @@ const LectureModal = ({
   lecture: LectureData;
   user: User;
 }): JSX.Element => {
-  const { deleteLecture } = useLecture();
+  const { deleteLecture, adminDelete } = useLecture();
 
   const router = useRouter();
 
@@ -22,6 +22,14 @@ const LectureModal = ({
     const response = await deleteLecture(lecture.idx);
 
     if (response === 200) {
+      router.reload();
+    }
+  };
+
+  const onClickAdminDelete = async () => {
+    const response = await adminDelete(lecture.idx);
+
+    if (response === 201) {
       router.reload();
     }
   };
@@ -62,6 +70,13 @@ const LectureModal = ({
               <S.LectureEditWrap>
                 <S.LectureEditBtn>편집</S.LectureEditBtn>
                 <S.LectureEditBtn onClick={onClickDelete}>
+                  삭제
+                </S.LectureEditBtn>
+              </S.LectureEditWrap>
+            )}
+            {user.accessLevel === 3 && (
+              <S.LectureEditWrap>
+                <S.LectureEditBtn onClick={onClickAdminDelete}>
                   삭제
                 </S.LectureEditBtn>
               </S.LectureEditWrap>

@@ -42,7 +42,7 @@ const Item = ({ lecture }: { lecture: LectureData }): JSX.Element => {
           <S.ItemContentBottom>
             <S.ItemContentBottomTags>
               {lecture.tags.map((tag: Tag) => {
-                return <div key={tag.idx}>#{tag.name} </div>;
+                return <div key={tag.idx}>#{tag.name}&nbsp;</div>;
               })}
             </S.ItemContentBottomTags>
 

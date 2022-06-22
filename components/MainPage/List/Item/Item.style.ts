@@ -72,4 +72,6 @@ export const ItemContentBottomInfo = styled.div``;
 export const ItemContentBottomInfoData = styled.div`
   font-size: 13px;
   color: #767676;
+  display: flex;
+  justify-content: flex-end;
 `;

@@ -1,6 +1,6 @@
 import type { AppProps } from 'next/app';
 import { RecoilRoot } from 'recoil';
-import Header from '../components/Header/Header';
+import Header from '../components/Common/Header/Header';
 import GlobalStyle from '../styles/GlobalStyle';
 import { Toaster } from 'react-hot-toast';
 

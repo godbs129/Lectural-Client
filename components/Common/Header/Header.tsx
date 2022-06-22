@@ -1,11 +1,11 @@
 import * as S from './Header.style';
-import Logo from '../../public/assets/Logo.svg';
-import { useLogin } from '../../hooks/Login/useLogin';
+import Logo from '../../../public/assets/Logo.svg';
+import { useLogin } from '../../../hooks/Login/useLogin';
 import { useEffect, useState } from 'react';
-import useQueryParam from '../../lib/useQueryParam';
+import useQueryParam from '../../../lib/useQueryParam';
 import { useRecoilState } from 'recoil';
-import { tokenAtom, userAtom } from '../../store/userStore';
-import Token from '../../lib/token';
+import { tokenAtom, userAtom } from '../../../store/userStore';
+import Token from '../../../lib/token';
 
 const Header = (): JSX.Element => {
   const [token, setToken] = useRecoilState(tokenAtom);

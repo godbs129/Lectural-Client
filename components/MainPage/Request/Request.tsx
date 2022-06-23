@@ -40,7 +40,7 @@ const Request = (): JSX.Element => {
 
         <S.RequestContentWrap>
           {requests.map((request: any) => {
-            return <S.Request>{request.content}</S.Request>;
+            return <S.Request key={request.idx}>{request.content}</S.Request>;
           })}
         </S.RequestContentWrap>
 

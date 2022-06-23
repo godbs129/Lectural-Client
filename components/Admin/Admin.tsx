@@ -67,7 +67,7 @@ const AdminPage = (): JSX.Element => {
 
       <S.AdminContent>
         {lectures.map((lecture: LectureData) => {
-          return <Item lecture={lecture} />;
+          return <Item key={lecture.idx} lecture={lecture} />;
         })}
       </S.AdminContent>
     </S.AdminWrap>

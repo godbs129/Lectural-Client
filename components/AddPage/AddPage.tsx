@@ -181,7 +181,11 @@ const AddPage = (): JSX.Element => {
               }}
             >
               {places.map((place) => {
-                return <option value={place.idx}>{place.name}</option>;
+                return (
+                  <option key={place.idx} value={place.idx}>
+                    {place.name}
+                  </option>
+                );
               })}
             </S.AddPageSelect>
           </S.AddPageInputWrap>
